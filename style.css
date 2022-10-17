@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f6ffd4;
+}
+
+header {
+    background: #f1c40f;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 5rem;
+    align-items: center;
+    padding: 0px 50px;
+    box-shadow: 0px 10px 16px rgb(248, 247, 247);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div img {
+    display: block;
+    width: 50px;
+    margin-right: 20px;
+    transition: .3s ease all;
+}
+
+header div img:hover {
+    width: 60px;
+    margin-right: 10px;
+    transform: rotate(-15deg);
+}
+
+header h1 span {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin-left: 30px;
+}
+main
+
+.notesContainer {
+    max-width: 100vw;
+    padding: 30px;
+    justify-content: center;
+}
+
+
+
+.mainButton {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.mainButton {
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    perspective: 230px;
+    border-radius: 30px;
+}
+
+.mainButton span {
+    background: #ffbd3c;
+    background: linear-gradient(0deg, rgb(226, 238, 0) 0%, rgb(251, 222, 2) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    transition: all .3s;
+    transition: all .3s;
+}
+
+.mainButton span:nth-child(1) {
+    transform: rotateX(90deg);
+    transform-origin: 50% 50% -20px;
+}
+
+.mainButton span:nth-child(2) {
+    transform-origin: 50% 50% -20px;
+}
+
+.mainButton:hover span:nth-child(1) {
+    transform: rotateX(0deg);
+}
+
+.mainButton:hover span:nth-child(2) {
+    color: transparent;
+    transform: rotateX(-90deg);
+}
+
+i {
+    font-size: 25px;
+    transition: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.edit {
+    margin-right: 10px;
+    background-color: transparent;
+    color: rgb(19, 76, 222);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.edit:hover {
+    color: #ffbd3c;
+}
+
+.edit:active {
+    color: #2d2d2d;
+    transition: none;
+}
+
+.trash {
+    background-color: transparent;
+    transition: all .3s linear;
+    color: rgb(234, 83, 13);
+    cursor: pointer;
+}
+
+.trash:hover {
+    color: #ffbd3c;
+}
+
+.trash:active {
+    color: #2d2d2d;
+    transition: none;
+}
+
+
+.searchBox {
+    background: #2d2d2d;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin: 50px;
+}
+
+.searchBox .search {
+    font-size: 18px;
+    color: rgba(250, 247, 247, 0.865);
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: none;
+    float: left;
+    width: 0;
+    transition: .5s ease;
+}
+
+.searchBox i {
+    font-size: 20px;
+    color: #f1c40f;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background: white;
+    text-align: center;
+    margin: 0px 5px;
+    transition: all .5s ease;
+}
+
+.searchBox:hover>.search {
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.searchBox:hover>i {
+    background: transparent;
+    transform: rotate(360deg);
+}
+
+.searchBox i:hover {
+    background: #fff;
+}
+
+.notesContainer .main {
+    margin: 30px 20px;
+    border: 1px solid #777;
+    box-shadow: 0px 7px 13px -4px black;
+    padding: 0px;
+    transition: all .1s linear;
+}
+.notesContainer .main:hover {
+    box-shadow: 0px 18px 25px 5px black;
+    transform: scale(1.05, 1.05);
+}
+
+.notesContainer .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 10px 10px;
+
+}
+
+.notesContainer .header .titleHead {
+    width: 200px;
+}
+
+.notesContainer .header .titleHead .titleInput {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d2d2d;
+    width: 100%;
+}
+
+.note {
+    background: transparent;
+    height: 200px;
+}
+
+.note .loose {
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: .8;
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 30px 20px;
+    resize: none;
+    height: 100%;
+}
+
+.note .save {
+    pointer-events: none;
+    outline: none;
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: .7;
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 30px 20px;
+    resize: none;
+    height: 100%;
+    user-select: none;
+}
+
+.hiddenTitle {
+    pointer-events: none;
+    font-size: unset;
+    opacity: 1;
+    color: rgb(208, 17, 17);
+    font-weight: 800;
+    text-align: center;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
+}
